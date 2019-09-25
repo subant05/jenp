@@ -18,3 +18,18 @@ test("Tesing: utilities.functional.alt()", ()=>{
         function(b) {return b}
     )("b")).toBe("b")
 })
+
+test("Tesing: utilities.functional.join()", ()=>{
+    expect(Functional.join(
+        (a,b)=>a/b
+        , data=>data.reduce((accum,curr)=>accum+curr)
+        , data=>data.length
+    )([1,2,3])).toBe(2)
+})
+
+test("Tesing: utilities.functional.curry()", ()=>{
+    const a = Functional.curry((a,b,c)=>a+b+c),
+        b = Functional.curry(a(2)),
+        c = b(2);
+    expect(c(2)).toBe(6)
+})
