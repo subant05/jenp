@@ -1,5 +1,4 @@
 export default function compose (){
-
     const args = arguments;
     let count = arguments.length -1,
         result;
