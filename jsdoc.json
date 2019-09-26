@@ -29,7 +29,6 @@
         "sort": [true],      
         "title": "Stack",     
         "sectionOrder": [        
-             "Classes",
              "Modules",
              "Externals",
              "Events",

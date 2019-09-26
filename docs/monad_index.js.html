@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Stack: functional library and framework building tools</title>
+    <title>monad/index.js - Stack: functional library and framework building tools</title>
     
     <meta name="description" content="Stack: functional library and framework building tools" />
     
@@ -46,31 +46,51 @@
 
 <div id="main">
     
+    <h1 class="page-title">monad/index.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module
+ * @name monad
+ */
+export {
+    /**
+     *  @description This monad Maybe and values of that type can either contain a value, or be an empty value.  A value of any type other then undefined or null, which is defined but used in the context of Maybe is Just. 
+     * @class Maybe
+     * @static
+     * @memberof monad
+     */
+    default as Maybe
+} from './Maybe';
 
+export {
+    /**
+     *  @description Either can be of 2 possibilities. The value is represented as either Left, which is error or Right which is an correct.Right is always favored
+     * @class Either
+     * @memberof monad
+     */
+    default as Either
+} from './Either';
 
-    <section class="package">
-        <h3> </h3>		
+export {
+    /**
+     *  @description IO is monad that is simply an abstract data type. Actions are defined rather than invoked. IO is a good choice to handle DOM mutation and reducing side effects.
+     * @class IO
+     * @memberof monad
+     */
+    default as IO
+} from './IO';
+
+</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
 
 
 
