@@ -67,7 +67,15 @@ export {
     default as tap
 } from './tap';
 
-export {default as identity} from './identity';
+export {
+    /**
+     * This function returns a function that console.logs the value passed in as an argument
+     * @function
+     * @returns {function}
+     */
+    default as identity
+} from './identity';
+
 export {default as wrap} from './wrap';
 export {default as always} from './always';
 export {default as and} from './and';
