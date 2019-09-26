@@ -1,7 +1,10 @@
 import * as func from './fn/index';
+import * as monad from './monad/index';
+
 
 const stack = {
-    func
+    fn
+    , monad
 }
 
 const global = global || window; 
