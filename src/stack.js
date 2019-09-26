@@ -1,4 +1,4 @@
-import * as func from './utilities/functional/index';
+import * as func from './fn/index';
 
 const stack = {
     func
