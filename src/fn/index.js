@@ -8,4 +8,5 @@ export {default as identity} from './identity';
 export {default as wrap} from './wrap';
 export {default as always} from './always';
 export {default as and} from './and';
-export {default as or} from './or'
+export {default as or} from './or';
+export {default as of} from './of';
