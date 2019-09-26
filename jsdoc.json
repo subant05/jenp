@@ -1,4 +1,5 @@
 {
+    "title": "Stack",
     "plugins": [
         "plugins/markdown"
     ],
@@ -25,7 +26,8 @@
     },
     "docdash": {
         "static": [true],         
-        "sort": [true],           
+        "sort": [true],      
+        "title": "Stack",     
         "sectionOrder": [        
              "Classes",
              "Modules",
@@ -45,9 +47,9 @@
             "url": "http://stackjs.com"
         },
         "meta": {                       
-            "title": "",                
-            "description": "",          
-            "keyword": ""               
+            "title": "Stack: functional library and framework building tools",                
+            "description": "Stack: functional library and framework building tools",          
+            "keyword": "functional, functional development, javascript, functional development with javasript"               
         },
         "search": [true],         
         "collapse": [true],       
@@ -57,7 +59,7 @@
         "private": [false],        
         "removeQuotes": ["all"] ,
         "scripts": [],                   
-        "menu":{                        
+        "menu":{                       
         }
     }
 }
