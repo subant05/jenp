@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest"
+    ,   "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "del": "^5.1.0",
+    "docdash": "^1.1.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
