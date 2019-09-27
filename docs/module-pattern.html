@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.revealingConstructor">revealingConstructor</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -288,6 +288,189 @@
 
 
         
+            
+
+    
+
+    <h4 class="name" id=".revealingConstructor"><span class="type-signature">(static) </span>revealingConstructor<span class="signature">(classOrFunction, methods)</span><span class="type-signature"> &rarr; {function}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line25">line 25</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>This function follows the revealing constructor pattern , used by class like Promise where we pass back a method as a callback but limit direct access to it via class instance.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>classOrFunction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Is a function/class that will be extended and whose selected methods will be removed from the instance of the function/class</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>methods</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Are methods that will be passed back as callbacks to the executor function</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>which accepts a callback that the function will execute</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
     
 
     
@@ -307,7 +490,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Sep 26 2019 20:33:48 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Sep 27 2019 16:52:26 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

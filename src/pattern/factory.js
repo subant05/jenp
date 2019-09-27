@@ -1,12 +1,6 @@
 export default function factory(fn,args=[]){
-
-    function Func() {
-        return fn.apply(this, args);
-    }
-    Func.prototype = fn.prototype;
-
+    class Func extends fn {}    
     return function() {
-        args = args.concat(Array.from(arguments))
-        return new Func();
+        return new Func(...args.concat([...arguments]));
     }
 }

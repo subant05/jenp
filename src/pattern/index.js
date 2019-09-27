@@ -12,3 +12,15 @@ export {
      */
     default as factory
 } from './factory'
+
+
+export {
+    /**
+     * @description This function follows the revealing constructor pattern , used by class like Promise where we pass back a method as a callback but limit direct access to it via class instance.
+     * @function 
+     * @param {function} classOrFunction - Is a function/class that will be extended and whose selected methods will be removed from the instance of the function/class
+     * @param {array} methods  - Are methods that will be passed back as callbacks to the executor function
+     * @returns {function} - which accepts a callback that the function will execute
+     */
+    default as revealingConstructor
+} from './revealing-constuctor'
