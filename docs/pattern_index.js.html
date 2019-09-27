@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Stack: functional library and framework building tools</title>
+    <title>pattern/index.js - Stack: functional library and framework building tools</title>
     
     <meta name="description" content="Stack: functional library and framework building tools" />
     
@@ -46,31 +46,32 @@
 
 <div id="main">
     
+    <h1 class="page-title">pattern/index.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module pattern
+ */
 
-
-    <section class="package">
-        <h3> </h3>		
+export {
+    /**
+     * @description This function returns an anonymous function. When curried returned function is executed it instantiates an instance of that function/class passed in on initial function and uses the arguments passed in initial execution or in the return anonymous function. 
+     * @function 
+     * @param {function} class - Is a function/class that will be instantiated on the execution on returned function
+     * @param {...any} arguments  - Are aguments that will be passed to the class during instantiation
+     * @returns {function}
+     */
+    default as factory
+} from './factory'</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
 
 
 
