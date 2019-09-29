@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -292,7 +292,188 @@
 
     
 
-    <h4 class="name" id=".reveal"><span class="type-signature">(static) </span>reveal<span class="signature">(classOrFunction, methods)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    <h4 class="name" id=".proxy"><span class="type-signature">(static) </span>proxy<span class="signature">(obj, methods)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>This function will create a clone of an object and add proxy in front of that obhect. Handlers for various actions such as get, set and be passed through in the second argument</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is the object that will be cloned and referenced by the return proxy object</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>methods</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an object that contains the handler for certain actions that you want to perform some logic before being passed through to the targeted object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>-Is the proxy object that you would use to access the targeted object</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".reveal"><span class="type-signature">(static) </span>reveal<span class="signature">(class, methods)</span><span class="type-signature"> &rarr; {function}</span></h4>
 
     
 
@@ -382,7 +563,7 @@
 
         <tr>
             
-                <td class="name"><code>classOrFunction</code></td>
+                <td class="name"><code>class</code></td>
             
 
             <td class="type">
@@ -490,7 +671,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sat Sep 28 2019 17:42:36 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sun Sep 29 2019 11:10:36 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
