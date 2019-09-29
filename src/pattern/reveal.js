@@ -1,4 +1,4 @@
-export default function revealingConstuct(fn,hideMethods=[]) {
+export default function reveal(fn,hideMethods=[]) {
 
     class Func extends fn {
             constructor(exec) {
@@ -11,7 +11,7 @@ export default function revealingConstuct(fn,hideMethods=[]) {
                     revealedMethods.push(that[m].bind(that));
                     that[m] = undefined;
                 })
-                
+
                 revealedMethods.push(a=>a)
 
                 exec(...revealedMethods)
