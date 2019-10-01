@@ -1,4 +1,5 @@
 {
+    "title": "Stack",
     "plugins": [
         "plugins/markdown"
     ],
@@ -19,7 +20,45 @@
         "monospaceLinks": true
     },
     "opts": {
+        "template": "node_modules/docdash",
         "encoding": "utf8",
         "destination": "./docs/"
+    },
+    "docdash": {
+        "static": [true],         
+        "sort": [true],      
+        "title": "Stack",     
+        "sectionOrder": [        
+             "Modules",
+             "Externals",
+             "Events",
+             "Namespaces",
+             "Mixins",
+             "Tutorials",
+             "Interfaces"
+        ],
+        "disqus": "",                   
+        "openGraph": {                  
+            "title": "Stack: functional library and framework building tools",                
+            "type": "documentation",          
+            "image": "",                
+            "site_name": "Stack.js",            
+            "url": "http://stackjs.com"
+        },
+        "meta": {                       
+            "title": "Stack: functional library and framework building tools",                
+            "description": "Stack: functional library and framework building tools",          
+            "keyword": "functional, functional development, javascript, functional development with javasript"               
+        },
+        "search": [true],         
+        "collapse": [true],       
+        "wrap": [true],           
+        "typedefs": [true],       
+        "navLevel": [0],          
+        "private": [false],        
+        "removeQuotes": ["all"] ,
+        "scripts": [],                   
+        "menu":{                       
+        }
     }
 }
