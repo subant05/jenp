@@ -48,3 +48,14 @@ export {
      */
     default as decorate
 } from './decorate'
+
+export {
+    /**
+     * @description This function will decorate a function with additional functionality and will return a curried function used to instantiate the decorator.
+     * @function
+     * @param {function} fn - This is a function or class that will be decorated
+     * @param {object} decoration  - This is an object that contains functions that will be added to the decorator instance
+     * @returns {function} - Takes constructor arguments and instantiates the decorator functuin
+     */
+    default as decorateCurry
+} from './decorateCurry'
