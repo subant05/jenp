@@ -31,8 +31,19 @@ export {
      * @description This function will create a clone of an object and add proxy in front of that obhect. Handlers for various actions such as get, set and be passed through in the second argument
      * @function 
      * @param {object} obj - This is the object that will be cloned and referenced by the return proxy object
-     * @param {array} methods  - This is an object that contains the handler for certain actions that you want to perform some logic before being passed through to the targeted object
+     * @param {object} methods  - This is an object that contains the handler for certain actions that you want to perform some logic before being passed through to the targeted object
      * @returns {object} -Is the proxy object that you would use to access the targeted object
      */
     default as proxy
 } from './proxy'
+
+export {
+    /**
+     * @description This function will decorate a function with additional functionality, which is passed through the decoration argument.
+     * @param {function} fn - This is a function or class that will be decorated
+     * @param {array} args  - This is an array of arguments that will passed to the instantiated decorator
+     * @param {object} decoration  - This is an object that contains functions that will be added to the decorator instance
+     * @returns {object} -An instance of the decorator that has been created within the decorator function
+     */
+    default as decorate
+} from './decorate'
