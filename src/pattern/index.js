@@ -40,6 +40,7 @@ export {
 export {
     /**
      * @description This function will decorate a function with additional functionality, which is passed through the decoration argument.
+     * @function
      * @param {function} fn - This is a function or class that will be decorated
      * @param {array} args  - This is an array of arguments that will passed to the instantiated decorator
      * @param {object} decoration  - This is an object that contains functions that will be added to the decorator instance
