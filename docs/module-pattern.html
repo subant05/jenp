@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorateCurry">decorateCurry</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -285,6 +285,189 @@
     <dd>
         
 <span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".decorateCurry"><span class="type-signature">(static) </span>decorateCurry<span class="signature">(fn, decoration)</span><span class="type-signature"> &rarr; {function}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line60">line 60</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>This function will decorate a function with additional functionality and will return a curried function used to instantiate the decorator.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is a function or class that will be decorated</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>decoration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an object that contains functions that will be added to the decorator instance</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>Takes constructor arguments and instantiates the decorator functuin</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
 
 
     </dd>
@@ -875,7 +1058,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Mon Sep 30 2019 20:54:43 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Oct 04 2019 15:18:32 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
