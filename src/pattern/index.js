@@ -59,3 +59,13 @@ export {
      */
     default as decorateCurry
 } from './decorateCurry'
+
+export {
+    /**
+     * @description This function will merge classes and functions together and return a recursive function that will take arguments for each function until all functions/class have been initiated.
+     * @function
+     * @param {...function} fns - This is a series of functions and classes that will be executed and their instance concatenated to one object
+     * @returns {function | object} - If all arguments have been satified for each function, then the combined object will be return. Otherwise another recursive function will be return that will take the arguments for the next function in queue.
+     */
+    default as merge
+} from './merge'
