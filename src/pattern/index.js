@@ -69,3 +69,24 @@ export {
      */
     default as merge
 } from './merge'
+
+export {
+    /**
+     * @description This will craete a middleware pattern that can be used as an application itself or as an extension of an application. Provide a configuration object that will setup the middleware behaviors and each behaviors associated actions
+     * @function
+     * @param {object} config - This is an object that instructions the function on how to configure the middleware pattern based on behaviors and actions associated with those behaviors.
+     * Example:
+     * middleware({
+     *       behaviors: {
+     *          send: {
+     *                submit:function(data,cb){
+     *                    fetch("/api/submit",{method: post, body: JSON.stringify(data)})
+     *                      .then(cb,(err)=>throw new Error(err.message))
+     *                }
+     *            }
+     *        }
+     *    })
+     * @returns {object} - A middleware manager is returned where one can added add middleware using the use() method. Each middleware must use next() callback as its last argument.
+     */
+    default as middleware
+} from './middleware'
