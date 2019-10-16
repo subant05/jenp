@@ -1,6 +1,6 @@
 import * as Pattern from '../src/pattern/index'
 
-test ("Testing: patter.middleware()",()=>{
+test ("Testing: pattern.middleware()",()=>{
     let greeting,
         fullGreeting;
 
