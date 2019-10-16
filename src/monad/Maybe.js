@@ -38,7 +38,6 @@ class Just extends Maybe{
 
     map(fn){
        return Maybe.fromNullable(fn(this._value))
-        return Maybe.fromNullable(fn(this._value))
     }
 
     filter(fn){
@@ -46,7 +45,6 @@ class Just extends Maybe{
     }
 
     chain(fn){
-        return fn(this._value)
         return fn(this._value)
     }
 
