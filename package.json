@@ -4,8 +4,8 @@
   "description": "Stack.js is a library of functions that can be combined ot create libraries or frameworks",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
-    ,   "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
+    "test": "jest",
+    "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
