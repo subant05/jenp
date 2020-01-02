@@ -1,24 +1,28 @@
 // Use IO pattern
+import * as IO from '../src/monad/IO';
+import * as Functional from '../src/fn/index'
 
-class Reaction {
-    constructor (node,event){
-        this.node = node;
-        this.event = new Event(event);
-        return this;
+class Reaction extends IO{
+
+    pipe(){
+        [...arguments].forEach(fn=>{
+            if(typeof fn === "function")
+                Reaction.map(fn)
+        })
     }
+
     subscribe(fn) {
         this.node.addEventListener(this.event,fn)
         return this;
     }
 
     publish(data){
-        const event =  new Event(this.event, {"bubbles":true, "cancelable":false})
-        event.data = data;
+        this.event.data = data;
         this.node.dispatchEvent(event)
     }
 }
 
 function fromEvent(node,event){
     const event =  document.createEvent(event)
-    return this;
+    return  Reaction.from(node,event)
 }   
