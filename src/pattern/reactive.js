@@ -23,6 +23,6 @@ class Reaction extends IO{
 }
 
 function fromEvent(node,event){
-    const event =  document.createEvent(event)
-    return  Reaction.from(node,event)
+    const eventType =  document.createEvent(event)
+    return  Reaction.from(node,eventType)
 }   
