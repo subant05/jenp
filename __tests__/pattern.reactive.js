@@ -2,9 +2,9 @@ import  * as Pattern from '../src/pattern/index';
 
 test("Testing: pattern.observable: document.body click event", ()=>{
     const body = document.body
-    const subscription = Pattern.observable(body,"click",(observer)=>{
+    const subscription = Pattern.observable((observer)=>{
         observer.next({isWorking: true})
-    })
+    }, {node:body, event:"click"})
 
     subscription.pipe(data=>{
         data["pipeOne"] = 'executed' 
@@ -26,7 +26,7 @@ test("Testing: pattern.observable: document.body click event", ()=>{
 
 test("Testing: pattern.observable", ()=>{
     const body = document.body
-    const subscription = Pattern.observable(null,null,(observer)=>{
+    const subscription = Pattern.observable((observer)=>{
         observer.next({isWorking: true})
     })
 
@@ -43,5 +43,5 @@ test("Testing: pattern.observable", ()=>{
         expect(data.pipeTwo).toBe("executed")
     })
 
-    subscription.emit(null, {})
+    subscription.emit({})
 })

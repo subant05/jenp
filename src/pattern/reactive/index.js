@@ -1,8 +1,8 @@
 import * as fn from '../../fn/index'
 
-function createObserver(){
-    let node  = document.createElement("div")
-
+function createObserver(nodeArg, eventArg){
+    const node  = nodeArg
+    const event = eventArg
     const container={}
     const handlers = [
                 [], //next
@@ -15,7 +15,6 @@ function createObserver(){
     class Observer {
 
         constructor(argNode){
-            node = argNode || node
             container.complete = this.complete.bind(this)
             container.next = this.next.bind(this)
             container.error = this.error.bind(this)
@@ -61,8 +60,8 @@ function createObserver(){
             })
         }
         
-        emit(event="default",data){
-            const eventInstance = new Event(event)
+        emit(data, eventArg){
+            const eventInstance = new Event(eventArg|| event)
             eventInstance.data = data
             node.dispatchEvent(eventInstance)
         }
@@ -73,12 +72,12 @@ function createObserver(){
     return {subscription, handler}
 }
 
-export default function observable(node, event = "default", handler = ob=>ob.next()){
-    if(!node)
-        node = document.createElement("div")
-        
-    const observer = createObserver(node)
-    node.addEventListener(event,(e)=>handler(observer.handler,e),false)
+export default function observable(handler = ob=>ob.next(), config = {event:"default"}){
+    const node = config.node || document.createElement("div")
+    const event = config.event
+
+    const observer = createObserver(node, event)
+    node.addEventListener(config.event,(e)=>handler(observer.handler,e),false)
 
     return observer.subscription;
 }
