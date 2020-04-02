@@ -1,15 +1,20 @@
 export default function compose (){
     const args = arguments;
-    let count = arguments.length -1,
+    let count = args.length -1,
         result;
 
-    return function (){
+    return function (data){
+        let iterator = count
+        if(data)
+            result = data;
+
         do {
-            if(typeof args[count] != "function")
+            if(typeof args[iterator] != "function")
                 continue;
 
-            result = args[count](result);
-        } while(--count >= 0)
+            result = args[iterator](result);
+        } while(--iterator >= 0)
+
         return result;
     }
 }

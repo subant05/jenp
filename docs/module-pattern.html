@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorateCurry">decorateCurry</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.merge">merge</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.middleware">middleware</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorateCurry">decorateCurry</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.merge">merge</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.middleware">middleware</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.observable">observable</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -146,7 +146,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will decorate a function with additional functionality, which is passed through the decoration argument.</p>
 </div>
 
@@ -350,7 +350,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will decorate a function with additional functionality and will return a curried function used to instantiate the decorator.</p>
 </div>
 
@@ -533,7 +533,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function returns an anonymous function. When curried returned function is executed it instantiates an instance of that function/class passed in on initial function and uses the arguments passed in initial execution or in the return anonymous function.</p>
 </div>
 
@@ -730,7 +730,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will merge classes and functions together and return a recursive function that will take arguments for each function until all functions/class have been initiated.</p>
 </div>
 
@@ -905,7 +905,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This will craete a middleware pattern that can be used as an application itself or as an extension of an application. Provide a configuration object that will setup the middleware behaviors and each behaviors associated actions</p>
 </div>
 
@@ -1025,6 +1025,212 @@ fetch(&quot;/api/submit&quot;,{method: post, body: JSON.stringify(data)})
 
     
 
+    <h4 class="name" id=".observable"><span class="type-signature">(static) </span>observable<span class="signature">(node, event, handler)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line103">line 103</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This will create an observable of a nodes event that can be subscribed to and whose data can be operated on prior to executing subscriber handler</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>node</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is the node that will be listened to for an event. If not node is available, assign null.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the event</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>handler</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The event handler for the triggered event. Here the observer object will be passed as first argument and you can execute (next(), error(), complete()) to alert the subscribers.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>returns an object that contains the subscriber() and pipe()</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id=".proxy"><span class="type-signature">(static) </span>proxy<span class="signature">(obj, methods)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
@@ -1076,7 +1282,7 @@ fetch(&quot;/api/submit&quot;,{method: post, body: JSON.stringify(data)})
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will create a clone of an object and add proxy in front of that obhect. Handlers for various actions such as get, set and be passed through in the second argument</p>
 </div>
 
@@ -1257,7 +1463,7 @@ fetch(&quot;/api/submit&quot;,{method: post, body: JSON.stringify(data)})
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function follows the revealing constructor pattern , used by class like Promise where we pass back a method as a callback but limit direct access to it via class instance.</p>
 </div>
 
@@ -1404,7 +1610,7 @@ fetch(&quot;/api/submit&quot;,{method: post, body: JSON.stringify(data)})
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Wed Mar 25 2020 21:06:52 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Apr 02 2020 16:37:17 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

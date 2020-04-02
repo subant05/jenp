@@ -90,3 +90,15 @@ export {
      */
     default as middleware
 } from './middleware'
+
+export {
+    /**
+     * @description This will create an observable of a nodes event that can be subscribed to and whose data can be operated on prior to executing subscriber handler
+     * @function
+     * @param {object} node - This is the node that will be listened to for an event. If not node is available, assign null.
+     * @param {string} event - The name of the event
+     * @param {function} handler - The event handler for the triggered event. Here the observer object will be passed as first argument and you can execute (next(), error(), complete()) to alert the subscribers.
+     * @returns {object} - returns an object that contains the subscriber() and pipe()
+     */
+    default as observable
+} from './reactive/index'
