@@ -1,10 +1,10 @@
-export default function compose (){
+export default function pipe (){
     const args = arguments;
     let count = args.length -1,
         result;
 
     return function (data){
-        let iterator = count
+        let iterator = 0
         if(data)
             result = data;
 
@@ -13,7 +13,7 @@ export default function compose (){
                 continue;
 
             result = args[iterator](result);
-        } while(--iterator >= 0)
+        } while(++iterator <= count)
 
         return result;
     }

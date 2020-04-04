@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='members'><li data-type='member' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-fn.html">fn</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-fn.html#.alt">alt</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.always">always</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.and">and</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.compose">compose</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.curry">curry</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.identity">identity</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.join">join</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.of">of</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.or">or</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.pipe">pipe</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.seq">seq</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.tap">tap</a></li><li data-type='method' style='display: none;'><a href="module-fn.html#.wrap">wrap</a></li></ul></li><li><a href="module-monad.html">monad</a></li><li><a href="module-pattern.html">pattern</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorate">decorate</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.decorateCurry">decorateCurry</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.factory">factory</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.merge">merge</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.middleware">middleware</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.proxy">proxy</a></li><li data-type='method' style='display: none;'><a href="module-pattern.html#.reveal">reveal</a></li></ul></li><li><a href="module-reactive.html">reactive</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-reactive.html#.filter">filter</a></li><li data-type='method' style='display: none;'><a href="module-reactive.html#.find">find</a></li><li data-type='method' style='display: none;'><a href="module-reactive.html#.map">map</a></li><li data-type='method' style='display: none;'><a href="module-reactive.html#.observable">observable</a></li><li data-type='method' style='display: none;'><a href="module-reactive.html#.operator">operator</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -86,12 +86,18 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         
             
-<h4 class="name" id=".decorate"><span class="type-signature">(static) </span>decorate<span class="type-signature"></span></h4>
 
+    
+
+    <h4 class="name" id=".decorate"><span class="type-signature">(static) </span>decorate<span class="signature">(fn, args, decoration)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
 
 
 
@@ -101,7 +107,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line48">line 48</a>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line49">line 49</a>
     </li></ul></dd>
     
 
@@ -140,7 +146,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will decorate a function with additional functionality, which is passed through the decoration argument.</p>
 </div>
 
@@ -151,11 +157,325 @@
 
 
 
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
         
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is a function or class that will be decorated</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an array of arguments that will passed to the instantiated decorator</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>decoration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an object that contains functions that will be added to the decorator instance</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>-An instance of the decorator that has been created within the decorator function</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".decorateCurry"><span class="type-signature">(static) </span>decorateCurry<span class="signature">(fn, decoration)</span><span class="type-signature"> &rarr; {function}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line60">line 60</a>
+    </li></ul></dd>
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This function will decorate a function with additional functionality and will return a curried function used to instantiate the decorator.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is a function or class that will be decorated</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>decoration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an object that contains functions that will be added to the decorator instance</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>Takes constructor arguments and instantiates the decorator functuin</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
 
         
             
@@ -213,7 +533,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function returns an anonymous function. When curried returned function is executed it instantiates an instance of that function/class passed in on initial function and uses the arguments passed in initial execution or in the return anonymous function.</p>
 </div>
 
@@ -359,6 +679,352 @@
 
     
 
+    <h4 class="name" id=".merge"><span class="type-signature">(static) </span>merge<span class="signature">(&hellip;fns)</span><span class="type-signature"> &rarr; {function|object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line70">line 70</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This function will merge classes and functions together and return a recursive function that will take arguments for each function until all functions/class have been initiated.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>This is a series of functions and classes that will be executed and their instance concatenated to one object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>If all arguments have been satified for each function, then the combined object will be return. Otherwise another recursive function will be return that will take the arguments for the next function in queue.</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+|
+
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".middleware"><span class="type-signature">(static) </span>middleware<span class="signature">(config)</span><span class="type-signature"> &rarr; {object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="pattern_index.js.html">pattern/index.js</a>, <a href="pattern_index.js.html#line91">line 91</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>This will craete a middleware pattern that can be used as an application itself or as an extension of an application. Provide a configuration object that will setup the middleware behaviors and each behaviors associated actions</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>config</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>This is an object that instructions the function on how to configure the middleware pattern based on behaviors and actions associated with those behaviors.
+Example:
+middleware({
+behaviors: {
+send: {
+submit:function(data,cb){
+fetch(&quot;/api/submit&quot;,{method: post, body: JSON.stringify(data)})
+.then(cb,(err)=&gt;throw new Error(err.message))
+}
+}
+}
+})</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>A middleware manager is returned where one can added add middleware using the use() method. Each middleware must use next() callback as its last argument.</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
     <h4 class="name" id=".proxy"><span class="type-signature">(static) </span>proxy<span class="signature">(obj, methods)</span><span class="type-signature"> &rarr; {object}</span></h4>
 
     
@@ -410,7 +1076,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function will create a clone of an object and add proxy in front of that obhect. Handlers for various actions such as get, set and be passed through in the second argument</p>
 </div>
 
@@ -591,7 +1257,7 @@
 
 
 
-<div class="description">
+<div class="description usertext">
     <p>This function follows the revealing constructor pattern , used by class like Promise where we pass back a method as a callback but limit direct access to it via class instance.</p>
 </div>
 
@@ -738,7 +1404,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Mon Sep 30 2019 20:40:18 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Sat Apr 04 2020 16:06:27 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

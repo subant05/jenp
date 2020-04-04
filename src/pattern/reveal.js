@@ -5,19 +5,19 @@ export default function reveal(fn,hideMethods=[]) {
                 super()
 
                 const revealedMethods = [];
-                const that = this;
 
-                hideMethods.forEach(function(m){
-                    revealedMethods.push(that[m].bind(that));
-                    that[m] = undefined;
+                hideMethods.forEach((m)=>{
+                    revealedMethods.push(this[m].bind(this));
+                    this[m] = undefined;
                 })
 
                 revealedMethods.push(a=>a)
 
-                exec(...revealedMethods)
+                return exec(...revealedMethods)
             }
         }  
-        return function(exec) {
-            return new Func(exec);
-        }
+
+    return function(exec) {
+        return new Func(exec);
+    }
 }

@@ -13,6 +13,16 @@ export {
 
 export {
     /**
+     * @description This function takes a collection of functions, which are executed through a loop where the previous result of one function is passed to the next. The direction of the is top dowm where first function is executed first.
+     * @function 
+     * @param {...function} functionCollection - Is a collection for funcions
+     * @returns {any}
+     */
+    default as pipe
+} from './pipe';
+
+export {
+    /**
      *  @description This function will compare the results of 2 functions and return the one that has a value that is neither null or undefined.
      * @function
      * @param {function} funcA - The first function that will be compared.

@@ -7,7 +7,12 @@ test("Testing: pattern.decorate()",()=>{
             this.breed = breed;
             this.type = type;
         }
+        whoBarked(){
+            return `${this.bark()} went the dog`
+        }
     }
     const littleDog = Pattern.decorate(Dog, ["tan","Chiuahua","Toy"], {bark:()=>{return "Yap Yap"}})
     expect(littleDog.bark()).toBe("Yap Yap")
+    expect(littleDog.whoBarked()).toBe("Yap Yap went the dog")
+
 })
