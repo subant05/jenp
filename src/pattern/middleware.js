@@ -18,7 +18,7 @@ function iteratorOverMiddleware(middleware, args, finish, index) {
 }
 
 function verifyConfig(config){
-    return config &&  isFillObject(config);
+    return config && isFillObject(config);
 }
 
 function verifyMiddlewareInstance(middlewareInstance){

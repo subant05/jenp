@@ -1,4 +1,4 @@
-import * as fn from '../../fn/index'
+import * as fn from '../fn/index'
 
 function createObserver(nodeArg, eventArg){
     const node  = nodeArg
@@ -44,7 +44,7 @@ function createObserver(nodeArg, eventArg){
         }
 
         pipe(){
-            const pipedFn = fn.compose(...arguments)
+            const pipedFn = fn.pipe(...arguments)
             const that = this
             return {
                 subscribe(){
@@ -72,7 +72,7 @@ function createObserver(nodeArg, eventArg){
     return {subscription, handler}
 }
 
-export default function observable(handler = ob=>ob.next(), config = {event:"default"}){
+function observable(handler = ob=>ob.next(), config = {event:"default"}){
     const node = config.node || document.createElement("div")
     const event = config.event
 
@@ -81,3 +81,5 @@ export default function observable(handler = ob=>ob.next(), config = {event:"def
 
     return observer.subscription;
 }
+
+export {observable}

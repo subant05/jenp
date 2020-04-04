@@ -1,8 +1,8 @@
-import  * as Pattern from '../src/pattern/index';
+import  * as Rx from '../src/reactive/index';
 
-test("Testing: pattern.observable: document.body click event", ()=>{
+test("Testing: reactive.observable: document.body click event", ()=>{
     const body = document.body
-    const subscription = Pattern.observable((observer)=>{
+    const subscription = Rx.observable((observer)=>{
         observer.next({isWorking: true})
     }, {node:body, event:"click"})
 
@@ -23,10 +23,8 @@ test("Testing: pattern.observable: document.body click event", ()=>{
     body.dispatchEvent(evt)
 })
 
-
-test("Testing: pattern.observable", ()=>{
-    const body = document.body
-    const subscription = Pattern.observable((observer)=>{
+test("Testing: reactive.observable", ()=>{
+    const subscription = Rx.observable((observer)=>{
         observer.next({isWorking: true})
     })
 
