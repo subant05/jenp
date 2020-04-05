@@ -1,56 +1,47 @@
-import * as Monad from '../src/monad/index';
+import {Either} from '../src/Monad/index';
 
-test("Testing: monad.Either", ()=>{
-    const fromNullable = Monad
-                            .Either
+test("Testing: Either", ()=>{
+    const fromNullable = Either
                             .fromNullable(100)
 
-    , map = Monad
-                .Either
+    , map = Either
                 .fromNullable(100)
                 .map(data=>data/2)
                 .getOrElse("No Map")
 
-    , value = Monad
-                .Either
+    , value = Either
                 .fromNullable(100)
                 .map(data=>data/2)
                 .value
 
-    , setValue = Monad
-                .Either
+    , setValue = Either
                 .fromNullable(2)
     
-    , right = Monad
-                    .Either
+    , right = Either
                     .fromNullable(100)
                     .map((data)=>data*4)
                     .map(data=>data/2)
                     .filter(data=>data === 200)
                     .getOrElse("Nothing")
-    , left = Monad
-                .Either
+    , left = Either
                 .fromNullable(100)
                 .map((data)=>data*4)
                 .map(data=>data/2)
                 .filter(data=>data > 200)
                 .getOrElse("Nothing")
-    , undefinedValue = Monad
-                    .Either
+    , undefinedValue = Either
                     .fromNullable(undefined)
                     .map((data)=>data*4)
                     .map(data=>data/2)
                     .filter(data=>data > 200)
                     .getOrElse("Undefined")
-    , nullValue = Monad
-                    .Either
+    , nullValue = Either
                     .fromNullable(null)
                     .map((data)=>data*4)
                     .map(data=>data/2)
                     .filter(data=>data > 200)
                     .getOrElse("Null")
-    , chain = Monad
-                .Either
+    , chain = Either
                 .fromNullable(5)
                 .chain(function(data){
                     return new function(){
@@ -59,8 +50,7 @@ test("Testing: monad.Either", ()=>{
                         return this;
                     }
                 })
-    , nullChain = Monad
-                .Either
+    , nullChain = Either
                 .fromNullable(null)
                 .chain(function(data){
                     return new function(){

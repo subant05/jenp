@@ -1,32 +1,28 @@
-import * as Monad from '../src/monad/index';
+import {Maybe} from '../src/monad/index';
 
 test("Testing: monad.Maybe", ()=>{
-        const nothing = Monad
-            .Maybe
+        const nothing = Maybe
             .fromNullable(2)
             .map(data=>data*2)
             .map(data=>data*2)
             .filter(data=>data >= 10)
             .getOrElse("Nothing")
 
-        , just = Monad
-            .Maybe
+        , just = Maybe
             .fromNullable(2)
             .map(data=>data*2)
             .map(data=>data*2)
             .filter(data=>data === 8)
             .getOrElse("Nothing")
             
-        , nulled = Monad
-            .Maybe
+        , nulled = Maybe
             .fromNullable(null)
             .map(data=>data*2)
             .map(data=>data*2)
             .filter(data=>data === 8)
             .getOrElse("Nulled")
 
-        , undefinedValue = Monad
-            .Maybe
+        , undefinedValue = Maybe
             .fromNullable(undefined)
             .map(data=>data*2)
             .map(data=>data*2)

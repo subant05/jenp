@@ -1,6 +1,6 @@
-import * as Pattern from '../src/pattern/index'
+import {proxy} from '../src/pattern/index'
 
-test("Testing: pattern.proxy",()=>{
+test("Testing: proxy",()=>{
     const developer = {
         name: "John Doe"
         , language: "JavaScript"
@@ -10,7 +10,7 @@ test("Testing: pattern.proxy",()=>{
     let get = 0
     let set = 0
 
-    const proxyDeveloper = Pattern.proxy(developer,{
+    const proxyDeveloper = proxy(developer,{
         get(target, key){
             get++;
             

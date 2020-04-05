@@ -1,7 +1,7 @@
-import * as Functional from '../src/fn/index';
+import {pipe} from '../src/fn/index';
 
 test('Testing: fn.pipe()', () => {
-    expect(Functional.pipe(
+    expect(pipe(
         ()=>1,
         function (b) { return b+b},
         function(statement){

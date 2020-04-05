@@ -1,7 +1,7 @@
-import * as Monad from '../src/monad/index';
-import * as Functional from '../src/fn/index'
+import {IO} from '../src/monad/index';
+import {curry} from '../src/fn/index'
 
-test("Testing: monad.IO", ()=>{
+test("Testing: IO", ()=>{
     document.body.innerHTML =`<div id="io">Hello</div>`;
 
     function read(document,selector) { 
@@ -20,10 +20,9 @@ test("Testing: monad.IO", ()=>{
         return data+", Tony Stark."
     }
 
-    const readCurried =  Functional.curry(read, [document])
-    const writeCurried = Functional.curry(write, [document])
-    const addHelloStatement = Monad
-        .IO
+    const readCurried =  curry(read, [document])
+    const writeCurried = curry(write, [document])
+    const addHelloStatement = IO
         .from(readCurried("#io"))
         .map(greet)
         .map(writeCurried("#io"))

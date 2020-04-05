@@ -1,6 +1,6 @@
-import * as Functional from '../src/fn/index';
+import {always} from '../src/fn/index';
 
 test("Testing: fn.always()",()=>{
-    const CONSTANT =  Functional.always("CONSTANT")
+    const CONSTANT =  always("CONSTANT")
     expect(CONSTANT()).toBe("CONSTANT")
 })

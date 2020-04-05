@@ -1,6 +1,48 @@
 /**
  * @module fn
  */
+
+export {
+    /**
+     *  @description This takes a value and returns an anonymoyus function that when executed will always return the original value that was initial passed. Equivelant to setting and getting a constant
+     * @function
+     * @param {any} value - data/value that is to be wrapped by the functor
+     * @returns {function} - When executed will return value passed into the wrapped function
+     */
+    default as always
+} from './always';
+
+export {
+    /**
+     *  @description This function will compare the results of 2 functions and return the one that has a value that is neither null or undefined.
+     * @function
+     * @param {function} funcA - The first function that will be compared.
+     * @param {function} funcB - The second function that will be compared.
+     * @returns {any}
+     */
+    default as alt
+} from './alt';
+
+export {
+    /**
+     *  @description This takes a number of values that can be of any type. It will check the values themselves or the results of the functions to determine if all conditions match.
+     * @function
+     * @param {...any} value - number of arguments that can be of any type.
+     * @returns {boolean}
+     */
+    default as and
+} from './and';
+
+export {
+    /**
+     * @description This function takes a collection of functions, which are executed through a loop where the previous result of one function is passed to the next. The direction of the is bottom up where last function is executed first.
+     * @function 
+     * @param {...function} functionCollection - Is a collection for funcions
+     * @returns {any}
+     */
+    default as clone
+} from './clone';
+
 export {
     /**
      * @description This function takes a collection of functions, which are executed through a loop where the previous result of one function is passed to the next. The direction of the is bottom up where last function is executed first.
@@ -13,24 +55,23 @@ export {
 
 export {
     /**
-     * @description This function takes a collection of functions, which are executed through a loop where the previous result of one function is passed to the next. The direction of the is top dowm where first function is executed first.
-     * @function 
-     * @param {...function} functionCollection - Is a collection for funcions
-     * @returns {any}
+     *  @description This function takes a function and returns an a partial function of that function. 
+     * @function
+     * @param {function} curry - function we want to parital
+     * @param {any[]} [arguments] - optional array of arguments that will are passed to the curried function
+     * @returns {function}
      */
-    default as pipe
-} from './pipe';
+    default as curry
+} from './curry';
 
 export {
     /**
-     *  @description This function will compare the results of 2 functions and return the one that has a value that is neither null or undefined.
+     *  @description This function returns a function that console.logs the value passed in as an argument
      * @function
-     * @param {function} funcA - The first function that will be compared.
-     * @param {function} funcB - The second function that will be compared.
-     * @returns {any}
+     * @returns {function}
      */
-    default as alt
-} from './alt';
+    default as identity
+} from './identity';
 
 export {
     /**
@@ -46,14 +87,33 @@ export {
 
 export {
     /**
-     *  @description This function takes a function and returns an a partial function of that function. 
+ *  @description This takes a value of any type and it will return that same value wrapped in an array
+ * @function
+ * @param {...any} value - number of arguments that can be of any type.
+ * @returns {array}
+ */
+default as of
+} from './of'
+
+export {
+    /**
+     *  @description This takes a number of values that can be of any type. It will check the values themselves or the results of the functions to determine if any of the conditions art true.
      * @function
-     * @param {function} curry - function we want to parital
-     * @param {any[]} [arguments] - optional array of arguments that will are passed to the curried function
-     * @returns {function}
+     * @param {...any} value - number of arguments that can be of any type.
+     * @returns {boolean}
      */
-    default as curry
-} from './curry';
+    default as or
+} from './or';
+
+export {
+    /**
+     * @description This function takes a collection of functions, which are executed through a loop where the previous result of one function is passed to the next. The direction of the is top dowm where first function is executed first.
+     * @function 
+     * @param {...function} functionCollection - Is a collection for funcions
+     * @returns {any}
+     */
+    default as pipe
+} from './pipe';
 
 export {
     /**
@@ -77,15 +137,6 @@ export {
 
 export {
     /**
-     *  @description This function returns a function that console.logs the value passed in as an argument
-     * @function
-     * @returns {function}
-     */
-    default as identity
-} from './identity';
-
-export {
-    /**
      *  @description This a functor that accepts a value and returns that value in a monad. Use fmap to manipulate the value and return a new value without mutating the original
      * @function
      * @param {any} value - data/value that is to be wrapped by the functor
@@ -94,42 +145,3 @@ export {
     default as wrap
 } from './wrap';
 
-export {
-    /**
-     *  @description This takes a value and returns an anonymoyus function that when executed will always return the original value that was initial passed. Equivelant to setting and getting a constant
-     * @function
-     * @param {any} value - data/value that is to be wrapped by the functor
-     * @returns {function} - When executed will return value passed into the wrapped function
-     */
-    default as always
-} from './always';
-
-export {
-    /**
-     *  @description This takes a number of values that can be of any type. It will check the values themselves or the results of the functions to determine if all conditions match.
-     * @function
-     * @param {...any} value - number of arguments that can be of any type.
-     * @returns {boolean}
-     */
-    default as and
-} from './and';
-
-export {
-    /**
-     *  @description This takes a number of values that can be of any type. It will check the values themselves or the results of the functions to determine if any of the conditions art true.
-     * @function
-     * @param {...any} value - number of arguments that can be of any type.
-     * @returns {boolean}
-     */
-    default as or
-} from './or';
-
-export {
-        /**
-     *  @description This takes a value of any type and it will return that same value wrapped in an array
-     * @function
-     * @param {...any} value - number of arguments that can be of any type.
-     * @returns {array}
-     */
-    default as of
-} from './of';

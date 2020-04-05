@@ -1,8 +1,8 @@
-import * as Pattern from '../src/pattern/index';
+import {factory} from '../src/pattern/index';
 import TestRunner from 'jest-runner';
 import { exportAllDeclaration } from '@babel/types';
 
-test("Testing: pattern.factory()",()=>{
+test("Testing: factory()",()=>{
     class Cat {
         constructor(eyeColor,furColor){
             this.eyeColor = eyeColor
@@ -26,10 +26,10 @@ test("Testing: pattern.factory()",()=>{
     Dog.prototype.bark = function(){return this.sound;}
 
 
-    const myCat = Pattern.factory(Cat,["yellow"])("black")
-    const catClass = Pattern.factory(Cat)
+    const myCat = factory(Cat,["yellow"])("black")
+    const catClass = factory(Cat)
     const neighborCat = catClass("blue","white")
-    const neighborsDog = Pattern.factory(Dog,["large","black"])("Roof")
+    const neighborsDog = factory(Dog,["large","black"])("Roof")
 
     expect(myCat.getEyeColor()).toBe('Pretty yellow eyes.')
     expect(myCat.getFurColor()).toBe('Pretty black fur.')

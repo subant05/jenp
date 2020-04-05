@@ -1,5 +1,5 @@
 
-import * as Pattern from '../src/pattern/index';
+import {decorateCurry} from '../src/pattern/index';
 
 test("Testing: pattern.decorateCurry()",()=>{
     class Dog {
@@ -13,7 +13,7 @@ test("Testing: pattern.decorateCurry()",()=>{
             return `This ${this.color} dog is a ${this.breed} and it belongs to the ${this.type} group.`
         }
     }
-    const decoratedDog = Pattern.decorateCurry(Dog, {bark:()=>{return "Yap Yap"}})
+    const decoratedDog = decorateCurry(Dog, {bark:()=>{return "Yap Yap"}})
     const littleDog = decoratedDog("tan","Chiuahua","Toy")
     expect(littleDog.bark()).toBe("Yap Yap")
     expect(littleDog.breed).toBe("Chiuahua")

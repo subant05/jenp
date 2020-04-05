@@ -1,8 +1,8 @@
-import * as Functional from '../src/fn/index';
+import {seq} from '../src/fn/index';
 
 test("Tesing: fn.seq()", ()=>{
     const dataChange = {}
-    const sequentialTestFn = Functional.seq(
+    const sequentialTestFn = seq(
         (data)=>{dataChange.A = "A"}
         , (data)=>{dataChange.B = "B"}
         , (data)=>{dataChange.C = "C"}
