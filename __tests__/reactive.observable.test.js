@@ -1,8 +1,8 @@
-import  * as Rx from '../src/reactive/index';
+import {observable} from '../src/reactive/index';
 
 test("Testing: reactive.observable: document.body click event", ()=>{
     const body = document.body
-    const subscription = Rx.observable((observer)=>{
+    const subscription = observable((observer)=>{
         observer.next({isWorking: true})
     }, {node:body, event:"click"})
 
@@ -24,7 +24,7 @@ test("Testing: reactive.observable: document.body click event", ()=>{
 })
 
 test("Testing: reactive.observable", ()=>{
-    const subscription = Rx.observable((observer)=>{
+    const subscription = observable((observer)=>{
         observer.next({isWorking: true})
     })
 

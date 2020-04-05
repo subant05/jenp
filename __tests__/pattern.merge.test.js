@@ -19,13 +19,8 @@ test ("Testing: pattern.merge()", ()=>{
         return this.location;
     }
     
-    const merge = Pattern.merge,
-        merger = merge(P,O,N);
-
-    merger("Anthony");
-    merger("Developer");
-
-    const executedPON = merger("United Stated of America");
+    const merger = Pattern.merge(P,O,N);
+    const executedPON = merger("Anthony")("Developer")("United Stated of America");
 
     expect(executedPON.getLocation()).toBe("United Stated of America");
     expect(executedPON.title).toBe("Developer");

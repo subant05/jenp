@@ -1,4 +1,4 @@
-import * as Functional from '../src/fn/index';
+import {tap} from '../src/fn/index';
 
 test("Testing: fn.tap()",()=>{
     let report;
@@ -7,8 +7,8 @@ test("Testing: fn.tap()",()=>{
         report = arguments[0]
     }
 
-    const assignedReportingService = Functional.tap(reporting)
-    const unassignedReportingService = Functional.tap();
+    const assignedReportingService = tap(reporting)
+    const unassignedReportingService = tap();
 
     expect(unassignedReportingService("A")).toBe("A")
     expect(assignedReportingService("B")).toBe("B")

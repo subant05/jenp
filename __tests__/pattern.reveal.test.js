@@ -1,6 +1,6 @@
-import  * as Pattern from '../src/pattern/index';
+import  {reveal} from '../src/pattern/index';
 
-test("Testing: pattern.reveal()", ()=>{
+test("Testing: reveal()", ()=>{
     let message;
     class Messenger {
         constructor(){
@@ -16,8 +16,8 @@ test("Testing: pattern.reveal()", ()=>{
         }
     }
 
-    const msg = Pattern.reveal(Messenger,['getMessage'])
-    const msg2 = Pattern.reveal(Messenger,['setMessage'])
+    const msg = reveal(Messenger,['getMessage'])
+    const msg2 = reveal(Messenger,['setMessage'])
     msg(a=>message = a())
     expect(message).toBe("Hello World!")
     expect(msg2(a=>a("What's Up")).message).toBe("What's Up")

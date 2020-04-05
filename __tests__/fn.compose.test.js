@@ -1,7 +1,7 @@
-import * as Functional from '../src/fn/index';
+import {compose} from '../src/fn/index';
 
 test('Testing: fn.compose()', () => {
-    expect(Functional.compose(
+    expect(compose(
         function(statement){
             return function(c){
                return  statement + (c * 2).toString();

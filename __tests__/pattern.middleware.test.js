@@ -1,6 +1,6 @@
-import * as Pattern from '../src/pattern/index'
+import {middleware} from '../src/pattern/index'
 
-test ("Testing: pattern.middleware()",()=>{
+test ("Testing: middleware()",()=>{
     let greeting,
         fullGreeting,
         fullGreetingWithPeriod;
@@ -9,7 +9,7 @@ test ("Testing: pattern.middleware()",()=>{
     function updateFullGreeting(data){fullGreeting = data + ", John Doe."}
     function updateFullGreetingWithPeriod(data){fullGreetingWithPeriod = data + ". John Doe."}
 
-    const mwm = Pattern.middleware({
+    const mwm = middleware({
          // Is the object that contains the list of action types.
         behaviors: {
             // This is an action type that will be added to middleware and other plugins will react to.

@@ -1,16 +1,14 @@
 import * as fn from '../fn/index'
 
 function createObserver(nodeArg, eventArg){
-    const node  = nodeArg
-    const event = eventArg
-    const container={}
-    const handlers = [
+    const node = nodeArg
+    , event = eventArg
+    , container={}
+    , handlers = [
                 [], //next
                 [], //error
                 []  //complete
-            ]
-    const pipes = []
-    const isComplete = false;
+            ];
 
     class Observer {
 
@@ -28,6 +26,7 @@ function createObserver(nodeArg, eventArg){
             handlers[2].forEach(fn=>{
                 fn(data)
             })
+
             this.complete = undefined
         }
 
@@ -68,15 +67,16 @@ function createObserver(nodeArg, eventArg){
     }
 
     const subscription = new Observer()
-    const handler = container
+    , handler = container;
+
     return {subscription, handler}
 }
 
 function observable(handler = ob=>ob.next(), config = {event:"default"}){
     const node = config.node || document.createElement("div")
-    const event = config.event
+    , event = config.event
+    , observer = createObserver(node, event);
 
-    const observer = createObserver(node, event)
     node.addEventListener(config.event,(e)=>handler(observer.handler,e),false)
 
     return observer.subscription;

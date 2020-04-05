@@ -1,4 +1,4 @@
-import * as Pattern from '../src/pattern/index';
+import {decorate} from '../src/pattern/index';
 
 test("Testing: pattern.decorate()",()=>{
     class Dog {
@@ -11,7 +11,7 @@ test("Testing: pattern.decorate()",()=>{
             return `${this.bark()} went the dog`
         }
     }
-    const littleDog = Pattern.decorate(Dog, ["tan","Chiuahua","Toy"], {bark:()=>{return "Yap Yap"}})
+    const littleDog = decorate(Dog, ["tan","Chiuahua","Toy"], {bark:()=>{return "Yap Yap"}})
     expect(littleDog.bark()).toBe("Yap Yap")
     expect(littleDog.whoBarked()).toBe("Yap Yap went the dog")
 

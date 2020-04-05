@@ -1,7 +1,7 @@
-import * as Functional from '../src/fn/index';
+import {join}from '../src/fn/index';
 
 test("Tesing: fn.join()", ()=>{
-    expect(Functional.join(
+    expect(join(
         (a,b)=>a/b
         , data=>data.reduce((accum,curr)=>accum+curr)
         , data=>data.length
