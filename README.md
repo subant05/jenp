@@ -27,7 +27,7 @@ gulp test
 ## Create Documentation for Library
 
 ```node
-gulp test
+gulp doc
 ```
 
 ## Modules
