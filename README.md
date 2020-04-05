@@ -7,6 +7,28 @@ Stack is a library to help developers build applications using functional develo
 ```node
 npm install
 ```
+## Development
+
+```node
+gulp watch
+```
+## Building Library
+
+```node
+gulp build
+```
+
+## Testing Library
+
+```node
+gulp test
+```
+
+## Create Documentation for Library
+
+```node
+gulp test
+```
 
 ## Modules
 
