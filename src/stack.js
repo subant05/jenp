@@ -13,3 +13,4 @@ const stack = {
 
 const global = global || window; 
 global.stack = stack;
+global._s = stack; 
