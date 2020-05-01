@@ -11,7 +11,7 @@ npm install
 ## Development
 
 ```node
-gulp watch
+gulp watch 
 ```
 ## Building Library
 
