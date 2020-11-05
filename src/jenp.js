@@ -14,4 +14,4 @@ const global = global || window;
 global.jenp = jenp;
 global._j = jenp; 
 
-export { jenp}
+export default jenp
