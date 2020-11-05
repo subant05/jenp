@@ -14,7 +14,7 @@ const paths = {
     }
 };
 function compile() {
-    return gulp.src('src/stack.js', { sourcemaps: true })
+    return gulp.src('src/jenp.js', { sourcemaps: true })
         .pipe(sourcemaps.init())
         .pipe(webpack( {
         mode: "development",
@@ -34,7 +34,7 @@ function compile() {
         }
         }))
         .pipe(uglify())
-        .pipe(concat('stack.min.js'))
+        .pipe(concat('jenp.min.js'))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest(paths.scripts.dest));
 }
