@@ -4,7 +4,7 @@ import * as pattern from './pattern/index';
 import * as reactive from './reactive/index';
 
 
-const stack = {
+const jenp = {
     fn
     , monad
     , pattern
@@ -12,5 +12,7 @@ const stack = {
 }
 
 const global = global || window; 
-global.stack = stack;
-global._s = stack; 
+global.jenp = jenp;
+global._s = jenp; 
+
+export default jenp
