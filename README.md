@@ -1,7 +1,7 @@
-# Stack
+# Jenp
 
-Stack is a library to help developers build applications using functional development.
-Documentation : [Here](https://subant05.github.io/stack/)
+Jenp is a library to help developers build applications using functional development.
+Documentation : [Here](https://subant05.github.io/jenp/)
 
 ## Installations
 
@@ -33,7 +33,7 @@ gulp doc
 
 ## Modules
 
-Stack is currently broken down into 4 modules.
+Jenp is currently broken down into 4 modules.
 
 ### fn
 
