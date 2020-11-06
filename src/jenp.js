@@ -10,8 +10,9 @@ const jenp = {
     , reactive
 }
 
-const global = global || window; 
-global.jenp = jenp;
-global._j = jenp; 
+if(window){
+    global.jenp = jenp;
+    global._j = jenp;
+} 
 
 export default jenp

@@ -1,8 +1,10 @@
 {
   "name": "jenp",
-   "version": "1.0.11",
+   "version": "1.0.15",
   "description": "Jenp is a library of functions that can be combined ot create libraries or frameworks",
   "main": "./dist/jenp.min.js",
+  "jsnext:main":"./src/jenp.js",
+  "module":"./src/jenp.js",
   "scripts": {
     "test": "jest",
     "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
