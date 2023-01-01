@@ -43,6 +43,6 @@
     "jest-cli": "^24.9.0",
     "jsdoc": "^3.6.3",
     "minimist": "^1.2.5",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   }
 }
