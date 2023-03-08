@@ -15,4 +15,4 @@ if(window){
     global._j = jenp;
 } 
 
-export default jenp
+export{ jenp as default}

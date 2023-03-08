@@ -1,6 +1,6 @@
 {
   "name": "jenp",
-  "version": "1.0.16",
+  "version": "1.0.24",
   "description": "Jenp is a library of functions that can be combined ot create libraries or frameworks",
   "main": "./dist/jenp.min.js",
   "jsnext:main": "./src/jenp.js",
@@ -44,5 +44,9 @@
     "jsdoc": "^3.6.3",
     "minimist": "^1.2.5",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "regenerator-runtime": "^0.13.11"
   }
 }
