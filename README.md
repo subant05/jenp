@@ -1,4 +1,6 @@
-# Jenp
+# Jenp <span style="color:red">DEPRECATED</span>
+
+## Congruity replaced Jenp [Click Here](https://github.com/subant05/congruity#readme)
 
 Jenp is a library to help developers build applications using functional development.
 Documentation : [Here](https://subant05.github.io/jenp/)
@@ -8,11 +10,13 @@ Documentation : [Here](https://subant05.github.io/jenp/)
 ```node
 npm install
 ```
+
 ## Development
 
 ```node
-gulp watch 
+gulp watch
 ```
+
 ## Building Library
 
 ```node
