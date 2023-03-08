@@ -5,6 +5,7 @@
   "main": "./src/jenp.js",
   "jsnext:main": "./src/jenp.js",
   "module": "./src/jenp.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "generate-docs": "node_modules/.bin/jsdoc -c jsdoc.json"
