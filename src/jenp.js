@@ -10,4 +10,9 @@ const jenp = {
   reactive,
 };
 
+if (window) {
+  global.jenp = jenp;
+  global._j = jenp;
+}
+
 export { jenp };
